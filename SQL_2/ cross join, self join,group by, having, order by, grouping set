@@ -15,9 +15,9 @@ ORDER BY A.product_id, B.store_id
 
 
 -- CROSS JOIN 
--- Hangi markada hangi kategoride kaçar ürün olduğu bilgisine ihtiyaç duyuluyor
--- Ürün sayısı hesaplamadan sadece marka * kategori ihtimallerinin hepsini içeren bir tablo oluşturun.
--- Çıkan sonucu daha kolay yorumlamak için brand_id ve category_id alanlarına göre sıralayın
+-- Hangi markada hangi kategoride kaÃ§ar Ã¼rÃ¼n olduÃ°u bilgisine ihtiyaÃ§ duyuluyor
+-- ÃœrÃ¼n sayÃ½sÃ½ hesaplamadan sadece marka * kategori ihtimallerinin hepsini iÃ§eren bir tablo oluÃ¾turun.
+-- Ã‡Ã½kan sonucu daha kolay yorumlamak iÃ§in brand_id ve category_id alanlarÃ½na gÃ¶re sÃ½ralayÃ½n
 
 SELECT * 
 FROM production.brands
