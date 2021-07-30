@@ -7,14 +7,15 @@ date date
 );
 
 INSERT INTO DEMO4 (User_id, Action,date)
-VALUES  (1, 'Start','1-1-20'),
-		(1, 'Cancel','1-2-20'),
-		(2, 'Start','1-3-20'),
-		(2, 'Publish','1-4-20'),
-		(3, 'Start','1-5-20'),
-		(3, 'Cancel','1-6-20'),
-		(1, 'Start','1-7-20'),
-		(1, 'Publish','1-8-20');
+VALUES  (1, 'Start', CAST('1-1-20' AS date)),
+	(1,'cancel', CAST('1-2-20' AS date)), 
+	(2,'start', CAST('1-3-20' AS date)), 
+	(2,'publish', CAST('1-4-20' AS date)), 
+	(3,'start', CAST('1-5-20' AS date)), 
+	(3,'cancel', CAST('1-6-20' AS date)), 
+	(1,'start', CAST('1-7-20' AS date)), 
+	(1,'publish', CAST('1-8-20' AS date))
+;
 select * from DEMO4
 
 -- retrieve count of starts, cancels, and publishes for each user
