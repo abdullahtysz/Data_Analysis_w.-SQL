@@ -29,10 +29,10 @@ FROM time_of_sales
 
 
  
--- UNBOUNDED PRECEDING --> ÖNCEKÝ SATIRLARIN HEPSiNE BAK (kendi partition içinde)
--- UNBOUNDED FOLLOWING--> SONRAKÝ SATIRLARIN HEPSÝNE BAK (kendi partition içinde)
+-- UNBOUNDED PRECEDING --> ÖNCEKi SATIRLARIN HEPSiNE BAK (kendi partition içinde)
+-- UNBOUNDED FOLLOWING--> SONRAKi SATIRLARIN HEPSÝNE BAK (kendi partition içinde)
 
--- N PRECEDING --> BELÝRTÝLEN N DEÐERÝNE KADAR ÖNCESÝNE GÝDÝP BAK
+-- N PRECEDING --> BELÝRTÝLEN N DEÐERÝNE KADAR ÖNCESiNE GidiP BAK
 -- M FOLLOWING --> BELÝRTÝLEN M DEÐERÝNE KADAR SONRASINA BAK
 
 
@@ -52,7 +52,7 @@ ORDER BY 1
 -- window function ile yazalým
 SELECT SUM(quantity) OVER (PARTITION BY product_id)
 FROM production.stocks
--- YENÝ BÝR SÜTUN OLARAK sonuç geldi ama tek sütun olduðu için anlamak zor. yanýna diðer sütunlarý da getirelim
+-- YENÝ BÝR SÜTUN OLARAK sonuç geldi ama tek sütun olduðu için anlamak zor. yanýna diger sütunları da getirelim
 
 SELECT *, SUM(quantity) OVER (PARTITION BY product_id)
 FROM production.stocks
